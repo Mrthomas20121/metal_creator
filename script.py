@@ -16,6 +16,16 @@ METALS = {
         'color': '#8FA5A6',
         'usable': False,
         'tool_metal': False
+    },
+    'solder': {
+        'color': '#A19A99',
+        'usable': True,
+        'tool_metal': False
+    },
+    'kanthal': {
+        'color': '#AD9CAB',
+        'usable': True,
+        'tool_metal': True
     }
 }
 
@@ -67,6 +77,21 @@ METAL_TYPES = {
     'helmet': True,
 }
 
+def translation(metal, info):
+    usable = info['usable']
+    tool_metal = info['tool_metal']
+
+    output = ''
+
+    output = 'types.tfc.metal.'+metal+'='
+
+    if not(usable) :
+        output+='item.tfc.metal.ingot.%s.name' % metal + '='+metal.title()
+
+def Upper() :
+    return 
+
+
 def tint_image(image, tint_color):
     return ImageChops.multiply(image, Image.new('RGBA', image.size, tint_color))
 
@@ -95,3 +120,4 @@ def tint(metal, info):
 
 for metal in METALS.keys() :
     tint(metal, METALS[metal])
+    translation(metal, METALS[metal])
