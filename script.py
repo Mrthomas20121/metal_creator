@@ -75,21 +75,39 @@ METAL_TYPES = {
     'boots': True,
     'unfinished_helmet': True,
     'helmet': True,
+    'shield': True
 }
 
 def translation(metal, info):
     usable = info['usable']
     tool_metal = info['tool_metal']
 
-    output = ''
-
-    output = 'types.tfc.metal.'+metal+'='
+    output = '\n\n#Metal: %s\n' % metal
+    output+= 'types.tfc.metal.%s=%s' % (metal, Upper(metal))
+    output+='\nfluid.%s=Molten %s' % (metal, Upper(metal))
 
     if not(usable) :
-        output+='item.tfc.metal.ingot.%s.name' % metal + '='+metal.title()
+        output+='\nitem.tfc.metal.ingot.%s.name=%s Ingot' % (metal, Upper(metal))
+    else :
+        for types in METAL_TYPES.keys() :
+            value = METAL_TYPES[types]
+            if (not(tool_metal) and value) or (tool_metal and value) :
+                if(types == 'trapdoor') :
+                    output+='\ntile.tfc.%s.%s.name=%s %s' % (types,metal, Upper(metal), Upper(types))
+                else :
+                    if(types.startswith('unfinished')) :
+                        ah = types.replace('_', ' %s ' % metal)
+                        output+='\nitem.tfc.metal.%s.%s.name=%s' % (types,metal, ah)    
+                    else :
+                        output+='\nitem.tfc.metal.%s.%s.name=%s %s' % (types,metal, Upper(metal), Upper(types))
+    os.makedirs('./out/Lang', exist_ok=True)
+    f = open('./out/lang/en_us.lang', 'a')
+    f.write(output)
+    f.close()
 
-def Upper() :
-    return 
+def Upper(s) :
+    splitString = s.replace('_', ' ').title()
+    return splitString
 
 
 def tint_image(image, tint_color):
@@ -103,10 +121,10 @@ def save(type_name, metal, color, tool_metal):
         if not(type_name.endswith('head') or type_name.endswith('blade') or type_name.endswith('chestplate') or type_name.endswith('greaves') or type_name.endswith('boots') or type_name.endswith('helmet') or type_name == 'tuyere' or type_name == 'shield') :
             result = Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
     if(type_name == 'trapdoor') :
-        os.makedirs('./out/blocks/'+type_name)
+        os.makedirs('./out/blocks/'+type_name, exist_ok=True)
         result.save('./out/blocks/'+type_name+'/'+metal+'.png')
     else :
-        os.makedirs('./out/items/metal/'+type_name)
+        os.makedirs('./out/items/metal/'+type_name, exist_ok=True)
         result.save('./out/items/metal/'+type_name+'/'+metal+'.png')
 
 def tint(metal, info):
