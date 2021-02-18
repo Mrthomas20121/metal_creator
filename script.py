@@ -176,18 +176,21 @@ def tint_image(image, tint_color):
 
 def save(type_name, metal, color, tool_metal):
 
-    print(type_name, color, './template/'+type_name+'.png')
-
     # boolean used to check if the type is a tool type
     isTool = METAL_TYPES[type_name]
 
     # open the file
     file = Image.open('./template/'+type_name+'.png')
+
+    # tint the image
     result = tint_image(file, color)
+
+    # if it's a tool composite the base image
     if type_name in ['axe', 'chisel', 'hammer', 'hoe', 'javelin', 'knife', 'lamp', 'mace', 'pick', 'propick', 'saw', 'scythe', 'shears', 'shovel', 'sword'] :
         if tool_metal and isTool :
             result = Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
     
+    # trapdoor and other blocks check
     if(type_name == 'trapdoor') :
         os.makedirs('./out/blocks/'+type_name, exist_ok=True)
         result.save('./out/blocks/'+type_name+'/'+metal+'.png')
