@@ -111,25 +111,35 @@ def Upper(s) :
 
 
 def tint_image(image, tint_color):
-    return ImageChops.multiply(image, Image.new('RGBA', image.size, tint_color))
+    return ImageChops.overlay(image, Image.new('RGBA', image.size, tint_color))
 
 def save(type_name, metal, color, tool_metal):
+
+    # boolean used to check if the type is a tool type
     isTool = METAL_TYPES[type_name]
+
+    # open the file
     file = Image.open('./template/'+type_name+'.png')
     result = tint_image(file, color)
-    if(tool_metal and isTool) or type_name == 'lamp' :
-        if not(type_name.endswith('head') or type_name.endswith('blade') or type_name.endswith('chestplate') or type_name.endswith('greaves') or type_name.endswith('boots') or type_name.endswith('helmet') or type_name == 'tuyere' or type_name == 'shield') :
+    if type_name in ['axe', 'chisel', 'hammer', 'hoe', 'javelin', 'knife', 'lamp', 'mace', 'pick', 'propick', 'saw', 'scythe', 'shears', 'shovel', 'sword'] :
+        if tool_metal and isTool :
             result = Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
+    
     if(type_name == 'trapdoor') :
         os.makedirs('./out/blocks/'+type_name, exist_ok=True)
         result.save('./out/blocks/'+type_name+'/'+metal+'.png')
     else :
         os.makedirs('./out/items/metal/'+type_name, exist_ok=True)
-        result.save('./out/items/metal/'+type_name+'/'+metal+'.png')
+        if (not isTool and not tool_metal) or (isTool and tool_metal) or (not isTool and tool_metal):
+            result.save('./out/items/metal/'+type_name+'/'+metal+'.png')
 
 def tint(metal, info):
     metalColor = ImageColor.getrgb(info['color'])
+
+    # boolean used to check if the metal is a tool metal
     metal_tool = info['tool_metal']
+
+    # if the metal is not usable, you only do it for the
     if(info['usable'] == False) :
         save('ingot', metal, metalColor, False)
     else :
@@ -137,5 +147,7 @@ def tint(metal, info):
             save(metal_type, metal, metalColor, metal_tool)
 
 for metal in METALS.keys() :
+
+    # provide the metal and the metal information
     tint(metal, METALS[metal])
     translation(metal, METALS[metal])
