@@ -26,7 +26,68 @@ METALS = {
         'color': '#AD9CAB',
         'usable': True,
         'tool_metal': True
+    },
+    'bismuth_steel': {
+        'color': '#32505A',
+        'usable': True,
+        'tool_metal': True
+    },
+    'weak_bismuth_steel': {
+        'color': '#32505A',
+        'usable': False,
+        'tool_metal': False
+    },
+    'damascus_steel': {
+        'color': '#9B8E85',
+        'usable': True,
+        'tool_metal': True
+    },
+    'weak_damascus_steel': {
+        'color': '#9B8E85',
+        'usable': False,
+        'tool_metal': False
+    },
+    'rose_alloy': {
+        'color': '#453D30',
+        'usable': True,
+        'tool_metal': False
+    },
+    'ferrochrome': {
+        'color': '#4A4A64',
+        'usable': True,
+        'tool_metal': False
+    },
+    'cadmium': {
+        'color': '#5C5C5E',
+        'usable': True,
+        'tool_metal': False
+    },
+    'nichrome': {
+        'color': '#77898E',
+        'usable': True,
+        'tool_metal': True
+    },
+    'alnico': {
+        'color': '#F9A135',
+        'usable': True,
+        'tool_metal': False
+    },
+    'vanadium': {
+        'color': '#5C5677',
+        'usable': True,
+        'tool_metal': False
+    },
+    'rhodium': {
+        'color': '#9F9393',
+        'usable': True,
+        'tool_metal': False
+    },
+    'palladium': {
+        'color': '#ADA895',
+        'usable': True,
+        'tool_metal': False
     }
+
 }
 
 METAL_TYPES = {
@@ -114,6 +175,8 @@ def tint_image(image, tint_color):
     return ImageChops.overlay(image, Image.new('RGBA', image.size, tint_color))
 
 def save(type_name, metal, color, tool_metal):
+
+    print(type_name, color, './template/'+type_name+'.png')
 
     # boolean used to check if the type is a tool type
     isTool = METAL_TYPES[type_name]
