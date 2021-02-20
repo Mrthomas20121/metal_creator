@@ -136,7 +136,10 @@ METAL_TYPES = {
     'boots': True,
     'unfinished_helmet': True,
     'helmet': True,
-    'shield': True
+    'shield': True,
+    'armor_layer_1': True,
+    'armor_layer_2': True,
+    'ingot_mold': False
 }
 
 def translation(metal, info):
@@ -170,7 +173,6 @@ def Upper(s) :
     splitString = s.replace('_', ' ').title()
     return splitString
 
-
 def tint_image(image, tint_color):
     return ImageChops.overlay(image, Image.new('RGBA', image.size, tint_color))
 
@@ -185,15 +187,23 @@ def save(type_name, metal, color, tool_metal):
     # tint the image
     result = tint_image(file, color)
 
+    if type_name.__contains__('mold') :
+        Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
+
     # if it's a tool composite the base image
     if type_name in ['axe', 'chisel', 'hammer', 'hoe', 'javelin', 'knife', 'lamp', 'mace', 'pick', 'propick', 'saw', 'scythe', 'shears', 'shovel', 'sword'] :
         if tool_metal and isTool :
             result = Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
     
-    # trapdoor and other blocks check
-    if(type_name == 'trapdoor') :
+    if  type_name == 'trapdoor' :
         os.makedirs('./out/blocks/'+type_name, exist_ok=True)
         result.save('./out/blocks/'+type_name+'/'+metal+'.png')
+    elif type_name == 'armor_layer_1' or type_name == 'armor_layer_2' :
+        os.makedirs('./out/models/armor'+type_name, exist_ok=True)
+        result.save('./out/models/armor/'+type_name+'/'+type_name.replace('armor', metal)+'.png')
+    elif type_name.__contains__('mold') :
+        os.makedirs('./out/items/ceramics/fired/'+type_name.removesuffix('_mold'), exist_ok=True)
+        result.save('./out/items/ceramics/fired/'+type_name.removesuffix('_mold')+'/'+metal+'.png')
     else :
         os.makedirs('./out/items/metal/'+type_name, exist_ok=True)
         if (not isTool and not tool_metal) or (isTool and tool_metal) or (not isTool and tool_metal):
