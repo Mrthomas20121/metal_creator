@@ -199,8 +199,8 @@ def save(type_name, metal, color, tool_metal):
         os.makedirs('./out/blocks/'+type_name, exist_ok=True)
         result.save('./out/blocks/'+type_name+'/'+metal+'.png')
     elif type_name == 'armor_layer_1' or type_name == 'armor_layer_2' :
-        os.makedirs('./out/models/armor'+type_name, exist_ok=True)
-        result.save('./out/models/armor/'+type_name+'/'+type_name.replace('armor', metal)+'.png')
+        os.makedirs('./out/models/armor', exist_ok=True)
+        result.save('./out/models/armor/'+type_name.replace('armor', metal)+'.png')
     elif type_name.__contains__('mold') :
         os.makedirs('./out/items/ceramics/fired/'+type_name.removesuffix('_mold'), exist_ok=True)
         result.save('./out/items/ceramics/fired/'+type_name.removesuffix('_mold')+'/'+metal+'.png')
