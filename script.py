@@ -1,5 +1,5 @@
 import os
-from PIL import Image, ImageChops, ImageColor
+from PIL import Image, ImageChops, ImageColor, ImagePalette
 
 METALS = {
     'chromium':{
@@ -44,6 +44,16 @@ METALS = {
     },
     'weak_damascus_steel': {
         'color': '#9B8E85',
+        'usable': False,
+        'tool_metal': False
+    },
+    'stainless_steel': {
+        'color': '#5C8D9D',
+        'usable': True,
+        'tool_metal': True
+    },
+    'weak_stainless_steel': {
+        'color': '#5C8D9D',
         'usable': False,
         'tool_metal': False
     },
@@ -139,7 +149,8 @@ METAL_TYPES = {
     'shield': True,
     'armor_layer_1': True,
     'armor_layer_2': True,
-    'ingot_mold': False
+    'ingot_mold': False,
+    'block': False
 }
 
 def translation(metal, info):
@@ -147,24 +158,28 @@ def translation(metal, info):
     tool_metal = info['tool_metal']
 
     output = '\n\n#Metal: %s\n' % metal
-    output+= 'types.tfc.metal.%s=%s' % (metal, Upper(metal))
+    output+= 'tfc.types.metal.%s=%s' % (metal, Upper(metal))
     output+='\nfluid.%s=Molten %s' % (metal, Upper(metal))
 
     if not(usable) :
         output+='\nitem.tfc.metal.ingot.%s.name=%s Ingot' % (metal, Upper(metal))
+    if tool_metal :
+        output+='\nitem.tfc.metal.anvil.%s.name=%s Anvil' % (metal, Upper(metal))
     else :
         for types in METAL_TYPES.keys() :
             value = METAL_TYPES[types]
-            if (not(tool_metal) and value) or (tool_metal and value) :
+            if not(tool_metal and value) or (tool_metal and value) :
                 if(types == 'trapdoor') :
                     output+='\ntile.tfc.%s.%s.name=%s %s' % (types,metal, Upper(metal), Upper(types))
-                else :
+                elif types not in ['block'] :
                     if(types.startswith('unfinished')) :
                         ah = types.replace('_', ' %s ' % metal)
-                        output+='\nitem.tfc.metal.%s.%s.name=%s' % (types,metal, ah)    
+                        output+='\nitem.tfc.metal.%s.%s.name=%s' % (types,metal, Upper(ah))
+                    elif types.__contains__('mold') :
+                        output+='\nitem.tfc.ceramics.fired.mold.%s.%s.name=Unshaped %s' % (types.removesuffix('_mold'),metal, Upper(metal))
                     else :
                         output+='\nitem.tfc.metal.%s.%s.name=%s %s' % (types,metal, Upper(metal), Upper(types))
-    os.makedirs('./out/Lang', exist_ok=True)
+    os.makedirs('./out/lang', exist_ok=True)
     f = open('./out/lang/en_us.lang', 'a')
     f.write(output)
     f.close()
@@ -174,7 +189,7 @@ def Upper(s) :
     return splitString
 
 def tint_image(image, tint_color):
-    return ImageChops.overlay(image, Image.new('RGBA', image.size, tint_color))
+    return ImageChops.multiply(image, Image.new('RGBA', image.size, tint_color))
 
 def save(type_name, metal, color, tool_metal):
 
@@ -188,7 +203,7 @@ def save(type_name, metal, color, tool_metal):
     result = tint_image(file, color)
 
     if type_name.__contains__('mold') :
-        Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
+        result = Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
 
     # if it's a tool composite the base image
     if type_name in ['axe', 'chisel', 'hammer', 'hoe', 'javelin', 'knife', 'lamp', 'mace', 'pick', 'propick', 'saw', 'scythe', 'shears', 'shovel', 'sword'] :
@@ -196,18 +211,21 @@ def save(type_name, metal, color, tool_metal):
             result = Image.alpha_composite(Image.open('./template/'+type_name+'_base.png'), result)
     
     if  type_name == 'trapdoor' :
-        os.makedirs('./out/blocks/'+type_name, exist_ok=True)
-        result.save('./out/blocks/'+type_name+'/'+metal+'.png')
+        os.makedirs('./out/textures/blocks/'+type_name, exist_ok=True)
+        result.save('./out/textures/blocks/'+type_name+'/'+metal+'.png')
     elif type_name == 'armor_layer_1' or type_name == 'armor_layer_2' :
-        os.makedirs('./out/models/armor', exist_ok=True)
-        result.save('./out/models/armor/'+type_name.replace('armor', metal)+'.png')
+        os.makedirs('./out/textures/models/armor', exist_ok=True)
+        result.save('./out/textures/models/armor/'+type_name.replace('armor', metal)+'.png')
     elif type_name.__contains__('mold') :
-        os.makedirs('./out/items/ceramics/fired/'+type_name.removesuffix('_mold'), exist_ok=True)
-        result.save('./out/items/ceramics/fired/'+type_name.removesuffix('_mold')+'/'+metal+'.png')
+        os.makedirs('./out/textures/items/ceramics/fired/mold/'+type_name.removesuffix('_mold'), exist_ok=True)
+        result.save('./out/textures/items/ceramics/fired/mold/'+type_name.removesuffix('_mold')+'/'+metal+'.png')
+    elif type_name == 'block' :
+        os.makedirs('./out/textures/blocks/metal/', exist_ok=True)
+        result.save('./out/textures/blocks/metal/'+metal+'.png')
     else :
-        os.makedirs('./out/items/metal/'+type_name, exist_ok=True)
+        os.makedirs('./out/textures/items/metal/'+type_name, exist_ok=True)
         if (not isTool and not tool_metal) or (isTool and tool_metal) or (not isTool and tool_metal):
-            result.save('./out/items/metal/'+type_name+'/'+metal+'.png')
+            result.save('./out/textures/items/metal/'+type_name+'/'+metal+'.png')
 
 def tint(metal, info):
     metalColor = ImageColor.getrgb(info['color'])
