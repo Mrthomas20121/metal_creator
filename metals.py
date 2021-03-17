@@ -282,17 +282,17 @@ MODDED_METALS = {
         },
         'vanadium': {
             'color': '#5C5677',
-            'usable': True,
+            'usable': False,
             'tool_metal': False
         },
         'rhodium': {
             'color': '#9F9393',
-            'usable': True,
+            'usable': False,
             'tool_metal': False
         },
         'palladium': {
             'color': '#ADA895',
-            'usable': True,
+            'usable': False,
             'tool_metal': False
         }
 
@@ -685,7 +685,7 @@ for metal_name in tfcflux_metals.keys() :
                 output = 'metal' if type_name == 'block' else type_name
                 output_path =  './out/textures/block/%s/%s' % (output, metal_name)
             if type_name == 'armor_layer_1' or type_name == 'armor_layer_2' :
-                output_path = './out/textures/models/armor/%s' % type_name.replace('armor', metal_name)
+                output_path = './out/textures/models/armor'
 
             # images
             image = Image.open(texture_path)
@@ -703,8 +703,9 @@ for metal_name in tfcflux_metals.keys() :
                 os.makedirs(output_path, exist_ok=True)
                 
                 if type_name == 'armor_layer_1' or type_name == 'armor_layer_2' :
-                    result.save(output_path+'.png')
-                result.save(output_path+'/'+metal_name+'.png')
+                    result.save(output_path+'/%s.png' % type_name.replace('armor', metal_name))
+                else : 
+                    result.save(output_path+'/'+metal_name+'.png')
 
     else :
         # metal is not usable, we only generate ingot and block texture
