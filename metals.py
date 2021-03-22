@@ -1,22 +1,49 @@
 
 import os
 from PIL import Image, ImageChops, ImageColor, ImagePalette
-# item.ironbackpacks.backpack.tfcompat.metal_name.name=metal_name Backpack
 
 SUPPORTED_MODS = {
     'tfcompat': {
-        'loaded': True,
         'types': {
-            'backpack': {
-                'textures': [
-                    'mods/ironbackpacks/backpack/base',
-                ],
-                'lang': 'item.ironbackpacks.backpack.tfcompat.%metal%.name=%upper_metal% Backpack'
+            'backpack_base': {
+                'textures': 'mods/tfcompat/backpack/base',
+                'base_texture': '',
+                'lang': 'item.ironbackpacks.backpack.tfcompat.%metal%.name=%upper_metal% Backpack',
+                'save': 'assets/tfcompat/textures/items/backpack_%metal_base'
+            },
+            'backpack_border': {
+                'textures': 'mods/tfcompat/backpack/border',
+                'base_texture': '',
+                'lang': '',
+                'save': 'assets/tfcompat/textures/items/backpack_%metal_border'
+            },
+            'backpack_latch_light': {
+                'textures': 'mods/tfcompat/backpack/latch_light',
+                'base_texture': '',
+                'lang': '',
+                'save': 'assets/tfcompat/textures/items/backpack_%metal_latch_light'
+            },
+            'backpack_latch_dark': {
+                'textures': 'mods/tfcompat/backpack/latch_dark',
+                'base_texture': '',
+                'lang': '',
+                'save': 'assets/tfcompat/textures/items/backpack_%metal_latch_dark'
             }
         }
     },
     'firmalife': {
-        'loaded': True
+        'types': {
+            'mallet': {
+                'textures': 'mods/firmalife/mattet',
+                'base_texture': 'mods/firmalife/mattet_base',
+                'lang': 'item.firmalife.%metal%_mallet.name=%upper_metal% Mallet'
+            },
+            'mallet_head': {
+                'textures': 'mods/firmalife/mattet_head',
+                'base_texture': '',
+                'lang': 'item.firmalife.%metal%_mallet_head.name=%upper_metal% Mallet Head'
+            }
+        }
     }
     
 }
@@ -613,6 +640,16 @@ def hasDefaultKey(metal, key) :
     return key in metal.get('default')
 
 # type stuff
+
+def getTypes(metal) :
+
+    MODDED_TYPES = {
+        **SUPPORTED_MODS.get('tfcompat').get('types')
+    }
+
+    if(metal in TFC_METALS.keys()) :
+        return MODDED_TYPES
+    return Metal_Types
 def getType(type_name) :
     return Metal_Types.get(type_name)
 def isTypeWeapon(type_name) :
