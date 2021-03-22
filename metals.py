@@ -282,17 +282,17 @@ MODDED_METALS = {
         },
         'vanadium': {
             'color': '#5C5677',
-            'usable': False,
+            'usable': True,
             'tool_metal': False
         },
         'rhodium': {
             'color': '#9F9393',
-            'usable': False,
+            'usable': True,
             'tool_metal': False
         },
         'palladium': {
             'color': '#ADA895',
-            'usable': False,
+            'usable': True,
             'tool_metal': False
         }
 
@@ -628,6 +628,7 @@ def hasBaseTexture(type_name) :
 
 def ColorImage(image, color) :
     rgb = ImageColor.getrgb(color)
+    rgb = (int(rgb[0]/0.7), int(rgb[1]/0.7), int(rgb[2]/0.7))
     image = image.convert("RGBA")
     img = Image.new('RGBA', image.size, (rgb[0], rgb[1], rgb[2], 170))
     multiply_image = ImageChops.multiply(img, image)
@@ -683,7 +684,7 @@ for metal_name in tfcflux_metals.keys() :
             # block
             if type_is_block :
                 output = 'metal' if type_name == 'block' else type_name
-                output_path =  './out/textures/block/%s/%s' % (output, metal_name)
+                output_path =  './out/textures/block/%s' % output
             if type_name == 'armor_layer_1' or type_name == 'armor_layer_2' :
                 output_path = './out/textures/models/armor'
 
@@ -699,11 +700,13 @@ for metal_name in tfcflux_metals.keys() :
 
                 result = Image.alpha_composite(base_image, result)
 
-            if (not metal_is_tool and type_is_weapon) or (metal_is_tool and type_is_weapon) or (metal_is_tool and not type_is_weapon) :
+            if not(not metal_is_tool and type_is_weapon) :
                 os.makedirs(output_path, exist_ok=True)
                 
                 if type_name == 'armor_layer_1' or type_name == 'armor_layer_2' :
                     result.save(output_path+'/%s.png' % type_name.replace('armor', metal_name))
+                if type_is_block :
+                    result.save(output_path+'/%s.png' % metal_name)
                 else : 
                     result.save(output_path+'/'+metal_name+'.png')
 
