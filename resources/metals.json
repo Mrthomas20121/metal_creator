@@ -1,0 +1,525 @@
+{
+    "bismuth": {
+        "color": "#486B72",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "bismuth_bronze": {
+        "color": "#418E4F",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "black_bronze": {
+        "color": "#3B2636",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "brass": {
+        "color": "#96892E",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "bronze": {
+        "color": "#7C5E33",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "copper": {
+        "color": "#B64027",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "gold": {
+        "color": "#DCBF1B",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "lead": {
+        "color": "#40494D",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "nickel": {
+        "color": "#4E4E3C",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "rose_gold": {
+        "color": "#EB7137",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "silver": {
+        "color": "#949495",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "tin": {
+        "color": "#90A4BB",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "zinc": {
+        "color": "#BBB9C4",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "sterling_silver": {
+        "color": "#AC927B",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "wrought_iron": {
+        "color": "#989897",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "pig_iron": {
+        "color": "#6A595C",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "steel": {
+        "color": "#5F5F5F",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "platinum": {
+        "color": "#9DADC0",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "black_steel": {
+        "color": "#111111",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "blue_steel": {
+        "color": "#2D5596",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "red_steel": {
+        "color": "#700503",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfc"
+    },
+    "weak_steel": {
+        "color": "#111111",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "weak_blue_steel": {
+        "color": "#2D5596",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "weak_red_steel": {
+        "color": "#700503",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "high_carbon_steel": {
+        "color": "#5F5F5F",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "high_carbon_blue_steel": {
+        "color": "#2D5596",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "high_carbon_red_steel": {
+        "color": "#700503",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "high_carbon_black_steel": {
+        "color": "#111111",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "unknown": {
+        "color": "#2F2B27",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfc"
+    },
+    "aluminium": {
+        "color": "#D9FBFC",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "aluminium_brass": {
+        "color": "#DCDABE",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "antimony": {
+        "color": "#E7E7F5",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "ardite": {
+        "color": "#F09614",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "cobalt": {
+        "color": "#6CA6E5",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "constantan": {
+        "color": "#D28874",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "electrum": {
+        "color": "#DFB950",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "invar": {
+        "color": "#AAAA9E",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "manyullyn": {
+        "color": "#B052C0",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "mithril": {
+        "color": "#8ADAF6",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "osmium": {
+        "color": "#B8D8DE",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "titanium": {
+        "color": "#C2C4CC",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "tungsten": {
+        "color": "#41454B",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "tungsten_steel": {
+        "color": "#565F6E",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "nickel_silver": {
+        "color": "#A4A4A5",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "red_alloy": {
+        "color": "#DA6E6E",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "boron": {
+        "color": "#252525",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "ferroboron": {
+        "color": "#4B4B4B",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "thorium": {
+        "color": "#3D4548",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "lithium": {
+        "color": "#C9CBC3",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "manganese": {
+        "color": "#9397A8",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "magnesium": {
+        "color": "#978195",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "beryllium": {
+        "color": "#E4EADA",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "beryllium_copper": {
+        "color": "#EAAE90",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "zirconium": {
+        "color": "#747527",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "zircaloy": {
+        "color": "#43423A",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcmetallum"
+    },
+    "hsla_steel": {
+        "color": "#3F4180",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "tough": {
+        "color": "#3F2B61",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "uranium": {
+        "color": "#3A6724",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcmetallum"
+    },
+    "enderium": {
+        "color": "#0E6A6A",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcompat"
+    },
+    "lumium": {
+        "color": "#FFE46A",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcompat"
+    },
+    "signalum": {
+        "color": "#A13800",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcompat"
+    },
+    "thaumium": {
+        "color": "#5A4B8B",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcompat"
+    },
+    "void_metal": {
+        "color": "#2D1847",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcompat"
+    },
+    "refined_iron": {
+        "color": "#3A6724",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcompat"
+    },
+    "hard_carbon": {
+        "color": "#3BC4CE",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcompat"
+    },
+    "extreme": {
+        "color": "#742A3C",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcompat"
+    },
+    "thermoconducting": {
+        "color": "#72805D",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcompat"
+    },
+    "silicon_carbide": {
+        "color": "#716E63",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcompat"
+    },
+    "chromium":{
+        "color": "#AF7CAA",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcflux"
+    },
+    "aluminium_steel":{
+        "color": "#8FA5A6",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcflux"
+    },
+    "weak_aluminium_steel":{
+        "color": "#8FA5A6",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "solder": {
+        "color": "#A19A99",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "kanthal": {
+        "color": "#AD9CAB",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcflux"
+    },
+    "bismuth_steel": {
+        "color": "#32505A",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcflux"
+    },
+    "weak_bismuth_steel": {
+        "color": "#32505A",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "damascus_steel": {
+        "color": "#9B8E85",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcflux"
+    },
+    "weak_damascus_steel": {
+        "color": "#9B8E85",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "stainless_steel": {
+        "color": "#5C8D9D",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcflux"
+    },
+    "weak_stainless_steel": {
+        "color": "#5C8D9D",
+        "usable": false,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "rose_alloy": {
+        "color": "#453D30",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "ferrochrome": {
+        "color": "#4A4A64",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "cadmium": {
+        "color": "#5C5C5E",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "nichrome": {
+        "color": "#77898E",
+        "usable": true,
+        "tool_metal": true,
+        "mod": "tfcflux"
+    },
+    "alnico": {
+        "color": "#F9A135",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "vanadium": {
+        "color": "#5C5677",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "rhodium": {
+        "color": "#9F9393",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    },
+    "palladium": {
+        "color": "#ADA895",
+        "usable": true,
+        "tool_metal": false,
+        "mod": "tfcflux"
+    }
+
+}

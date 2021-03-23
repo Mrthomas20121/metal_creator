@@ -1,0 +1,107 @@
+{
+    "shield": {
+        "bismuth_bronze": {
+            "back": "shield/bismuth_back",
+            "front": "shield/bismuth_front"
+        },
+        "copper": {
+            "back": "shield/copper_back",
+            "front": "shield/copper_front"
+        },
+        "black_bronze": {
+            "back": "shield/black_bronze_back",
+            "front": "shield/black_bronze_front"
+        },
+        "black_steel": {
+            "back": "shield/black_steel_back",
+            "front": "shield/black_steel_front"
+        },
+        "blue_steel": "shield/blue_steel",
+        "red_steel": "shield/blue_steel",
+        "steel": {
+            "back": "shield/steel_back",
+            "front": "shield/steel_front"
+        },
+        "wrought_iron": "shield/wrought_iron"
+    },
+    "unfinished_helmet": {
+        "bismuth_bronze": "unfinished_helmet/bismuth_bronze",
+        "copper": "unfinished_helmet/copper",
+        "black_bronze": "unfinished_helmet/black_bronze",
+        "black_steel": "unfinished_helmet/black_steel",
+        "blue_steel": "unfinished_helmet/blue_steel",
+        "red_steel": "unfinished_helmet/red_steel",
+        "steel": "unfinished_helmet/steel",
+        "wrought_iron": "unfinished_helmet/wrought_iron"
+    },
+    "unfinished_chestplate": {
+        "bismuth_bronze": "unfinished_chestplate/bismuth_bronze",
+        "copper": "unfinished_chestplate/copper",
+        "black_bronze": "unfinished_chestplate/black_bronze",
+        "black_steel": "unfinished_chestplate/black_steel",
+        "blue_steel": "unfinished_chestplate/blue_steel",
+        "red_steel": "unfinished_chestplate/red_steel",
+        "steel": "unfinished_chestplate/steel",
+        "wrought_iron": "unfinished_chestplate/wrought_iron"
+    },
+    "unfinished_greaves": {
+        "bismuth_bronze": "unfinished_greaves/bismuth_bronze",
+        "copper": "unfinished_greaves/copper",
+        "black_bronze": "unfinished_greaves/black_bronze",
+        "black_steel": "unfinished_greaves/black_steel",
+        "blue_steel": "unfinished_greaves/blue_steel",
+        "red_steel": "unfinished_greaves/red_steel",
+        "steel": "unfinished_greaves/steel",
+        "wrought_iron": "unfinished_greaves/wrought_iron"
+    },
+    "unfinished_boots": {
+        "bismuth_bronze": "unfinished_boots/bismuth_bronze",
+        "copper": "unfinished_boots/copper",
+        "black_bronze": "unfinished_boots/black_bronze",
+        "black_steel": "unfinished_boots/black_steel",
+        "blue_steel": "unfinished_boots/blue_steel",
+        "red_steel": "unfinished_boots/red_steel",
+        "steel": "unfinished_boots/steel",
+        "wrought_iron": "unfinished_boots/wrought_iron"
+    },
+    "helmet": {
+        "bismuth_bronze": "helmet/bismuth_bronze",
+        "copper": "helmet/copper",
+        "black_bronze": "helmet/black_bronze",
+        "black_steel": "helmet/black_steel",
+        "blue_steel": "helmet/blue_steel",
+        "red_steel": "helmet/red_steel",
+        "steel": "helmet/steel",
+        "wrought_iron": "helmet/wrought_iron"
+    },
+    "chestplate": {
+        "bismuth_bronze": "chestplate/bismuth_bronze",
+        "copper": "chestplate/copper",
+        "black_bronze": "chestplate/black_bronze",
+        "black_steel": "chestplate/black_steel",
+        "blue_steel": "chestplate/blue_steel",
+        "red_steel": "chestplate/red_steel",
+        "steel": "chestplate/steel",
+        "wrought_iron": "chestplate/wrought_iron"
+    },
+    "greaves": {
+        "bismuth_bronze": "greaves/bismuth_bronze",
+        "copper": "greaves/copper",
+        "black_bronze": "greaves/black_bronze",
+        "black_steel": "greaves/black_steel",
+        "blue_steel": "greaves/blue_steel",
+        "red_steel": "greaves/red_steel",
+        "steel": "greaves/steel",
+        "wrought_iron": "greaves/wrought_iron"
+    },
+    "boots": {
+        "bismuth_bronze": "boots/bismuth_bronze",
+        "copper": "boots/copper",
+        "black_bronze": "boots/black_bronze",
+        "black_steel": "boots/black_steel",
+        "blue_steel": "boots/blue_steel",
+        "red_steel": "boots/red_steel",
+        "steel": "boots/steel",
+        "wrought_iron": "boots/wrought_iron"
+    }
+}

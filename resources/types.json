@@ -1,0 +1,386 @@
+{
+    "ingot": {
+        "isWeapon": false,
+        "isBlock": false,
+        "texture": "ingot",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "double_ingot": {
+        "isWeapon": false,
+        "isBlock": false,
+        "texture": "double_ingot",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "scrap": {
+        "isWeapon": false,
+        "isBlock": false,
+        "texture": "scrap",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "dust": {
+        "isWeapon": false,
+        "texture": "dust",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "nugget": {
+        "isWeapon": false,
+        "isBlock": false,
+        "texture": "nugget",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "sheet": {
+        "isWeapon": false,
+        "isBlock": false,
+        "texture": "sheet",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "double_sheet": {
+        "isWeapon": false,
+        "isBlock": false,
+        "texture": "double_sheet",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "tuyere": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "tuyere",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "lamp": {
+        "isWeapon": false,
+        "isBlock": false,
+        "texture": "lamp",
+        "base_texture": "lamp_base",
+        "mod": "tfc"
+    },
+    "pick": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "pick",
+        "base_texture": "pick_base",
+        "mod": "tfc"
+    },
+    "pick_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "pick_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "shovel": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "shovel",
+        "base_texture": "shovel_base",
+        "mod": "tfc"
+    },
+    "shovel_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "shovel",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "axe": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "axe",
+        "base_texture": "axe_base",
+        "mod": "tfc"
+    },
+    "axe_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "axe_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "hoe": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "hoe",
+        "base_texture": "hoe_base",
+        "mod": "tfc"
+    },
+    "hoe_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "hoe_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "chisel": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "chisel",
+        "base_texture": "chisel_base",
+        "mod": "tfc"
+    },
+    "chisel_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "chisel_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "sword": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "sword",
+        "base_texture": "sword_base",
+        "mod": "tfc"
+    },
+    "sword_blade": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "sword_blade",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "mace": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "mace",
+        "base_texture": "mace_base",
+        "mod": "tfc"
+    },
+    "mace_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "mace_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "saw": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "saw",
+        "base_texture": "saw_base",
+        "mod": "tfc"
+    },
+    "saw_blade": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "saw_blade",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "javelin": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "javelin",
+        "base_texture": "javelin_base",
+        "mod": "tfc"
+    },
+    "javelin_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "javelin_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "hammer": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "hammer",
+        "base_texture": "hammer_base",
+        "mod": "tfc"
+    },
+    "hammer_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "hammer_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "propick": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "propick",
+        "base_texture": "propick_base",
+        "mod": "tfc"
+    },
+    "propick_head": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "propick_head",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "knife": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "knife",
+        "base_texture": "knife_base",
+        "mod": "tfc"
+    },
+    "knife_blade": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "knife_blade",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "scythe": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "scythe",
+        "base_texture": "scythe_base",
+        "mod": "tfc"
+    },
+    "scythe_blade": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "scythe_blade",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "shears": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "shears",
+        "base_texture": "shears_base",
+        "mod": "tfc"
+    },
+    "unfinished_helmet": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "unfinished_helmet",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "unfinished_chestplate": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "unfinished_chestplate",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "unfinished_greaves": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "unfinished_greaves",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "unfinished_boots": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "unfinished_boots",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "helmet": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "helmet",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "chestplate": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "chestplate",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "greaves": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "greaves",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "boots": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "boots",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "shield": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "shield",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "armor_layer_1": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "armor_layer_1",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "armor_layer_2": {
+        "isWeapon": true,
+        "isBlock": false,
+        "texture": "armor_layer_2",
+        "base_texture": "",
+        "mod": "tfc"
+    },
+    "block": {
+        "isWeapon": false,
+        "isBlock": true,
+        "texture": "block",
+        "base_texture": "",
+        "save": "blocks/metal/%s",
+        "mod": "tfc"
+    },
+    "trapdoor": {
+        "isWeapon": false,
+        "isBlock": true,
+        "texture": "trapdoor",
+        "base_texture": "",
+        "save": "blocks/trapdoor/%s",
+        "mod": "tfc"
+    },
+    "backpack_base": {
+        "textures": "mods/tfcompat/backpack/base",
+        "base_texture": "",
+        "lang": "item.ironbackpacks.backpack.tfcompat.%s.name=%upper_metal% Backpack",
+        "save": "backpack_%s_base",
+        "mod": "tfcompat"
+    },
+    "backpack_border": {
+        "textures": "mods/tfcompat/backpack/border",
+        "base_texture": "",
+        "lang": "",
+        "save": "backpack/backpack_%s_border",
+        "mod": "tfcompat"
+    },
+    "backpack_latch_light": {
+        "textures": "mods/tfcompat/backpack/latch_light",
+        "base_texture": "",
+        "lang": "",
+        "save": "backpack_%s_latch_light",
+        "mod": "tfcompat"
+    },
+    "backpack_latch_dark": {
+        "textures": "mods/tfcompat/backpack/latch_dark",
+        "base_texture": "",
+        "lang": "",
+        "save": "backpack_%s_latch_dark",
+        "mod": "tfcompat"
+    },
+    "mallet": {
+        "textures": "mods/firmalife/mattet",
+        "base_texture": "mods/firmalife/mattet_base",
+        "lang": "item.firmalife.%s_mallet.name=%s Mallet",
+        "mod": "firmalife"
+    },
+    "mallet_head": {
+        "textures": "mods/firmalife/mattet_head",
+        "base_texture": "",
+        "lang": "item.firmalife.%s_mallet_head.name=%s Mallet Head",
+        "mod": "firmalife"
+    }
+}
