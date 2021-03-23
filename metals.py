@@ -62,6 +62,11 @@ for metal_name in METALS.keys() :
             # get the type texture
             texture = item_type.get('texture')
 
+            save_name = ""
+
+            if 'save' in item_type:
+                save_name = item_type.get('save') % metal_name
+
             mod_id = item_type.get('mod')
 
             if (metal_mod == 'tfc' or metal_mod == 'tfcmetallum') and mod_id == 'tfc':
