@@ -52,8 +52,8 @@ for metal_name in METALS.keys() :
 
             # check if the type has a texture override
             type_has_default = False
-            if item_type in OVERRIDES :
-                item_override = OVERRIDES.get(item_type)
+            if type_name in OVERRIDES :
+                item_override = OVERRIDES.get(type_name)
                 type_has_default = metal_name in item_override
 
             # get the type base texture if it has one. if it doesn't have one the base texture is ''
@@ -73,7 +73,7 @@ for metal_name in METALS.keys() :
                 continue
 
             # debug print
-            #print(metal_name, type_name)
+            print(metal_name, type_name)
 
             # paths
             texture_path = './template/%s.png' % texture

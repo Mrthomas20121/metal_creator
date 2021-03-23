@@ -346,7 +346,7 @@
     "backpack_base": {
         "isWeapon": true,
         "isBlock": false,
-        "textures": "mods/tfcompat/backpack/base",
+        "texture": "mods/tfcompat/backpack/base",
         "base_texture": "",
         "lang": "item.ironbackpacks.backpack.tfcompat.%s.name=%upper_metal% Backpack",
         "save": "backpack_%s_base",
@@ -355,7 +355,7 @@
     "backpack_border": {
         "isWeapon": true,
         "isBlock": false,
-        "textures": "mods/tfcompat/backpack/border",
+        "texture": "mods/tfcompat/backpack/border",
         "base_texture": "",
         "lang": "",
         "save": "backpack/backpack_%s_border",
@@ -364,7 +364,7 @@
     "backpack_latch_light": {
         "isWeapon": true,
         "isBlock": false,
-        "textures": "mods/tfcompat/backpack/latch_light",
+        "texture": "mods/tfcompat/backpack/latch_light",
         "base_texture": "",
         "lang": "",
         "save": "backpack_%s_latch_light",
@@ -373,7 +373,7 @@
     "backpack_latch_dark": {
         "isWeapon": true,
         "isBlock": false,
-        "textures": "mods/tfcompat/backpack/latch_dark",
+        "texture": "mods/tfcompat/backpack/latch_dark",
         "base_texture": "",
         "lang": "",
         "save": "backpack_%s_latch_dark",
@@ -382,15 +382,15 @@
     "mallet": {
         "isWeapon": true,
         "isBlock": false,
-        "textures": "mods/firmalife/mattet",
-        "base_texture": "mods/firmalife/mattet_base",
+        "texture": "mods/firmalife/mallet",
+        "base_texture": "mods/firmalife/mallet_base",
         "lang": "item.firmalife.%s_mallet.name=%s Mallet",
         "mod": "firmalife"
     },
     "mallet_head": {
         "isWeapon": true,
         "isBlock": false,
-        "textures": "mods/firmalife/mattet_head",
+        "texture": "mods/firmalife/mallet_head",
         "base_texture": "",
         "lang": "item.firmalife.%s_mallet_head.name=%s Mallet Head",
         "mod": "firmalife"
